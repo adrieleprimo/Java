@@ -26,10 +26,6 @@ public class Program {
         double areaY = Math.sqrt(pY*(pY - y.a)*(pY-y.b)* (pY-y.c));
         System.out.printf("Triangle X area: %4f%n", areaX);
         System.out.printf("Triangle X area: %4f%n", areaY);
-        if(areaX > areaY){
-            System.out.printf("Large area: %.4f%n", areaX);
-        } else {
-            System.out.printf("Large area: %.4f%n", areaY);
-        }
+        System.out.printf("Large area: %.4f%n", Math.max(areaX, areaY));
     }
 }
