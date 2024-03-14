@@ -20,16 +20,14 @@ public class Program {
         y.a = sc.nextDouble();
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
-        double pX = (x.a+x.b+x.c)/2.0;
-        double areaX = Math.sqrt(pX*(pX - x.a)*(pX-x.b)* (pX-x.c));
-        double pY = (y.a+y.b+y.c)/2.0;
-        double areaY = Math.sqrt(pY*(pY - y.a)*(pY-y.b)* (pY-y.c));
-        System.out.printf("Triangle X area: %4f%n", areaX);
-        System.out.printf("Triangle X area: %4f%n", areaY);
+        double areaX = x.area();
+        double areaY = y.area();
+        System.out.printf("Triangle X area: %.4f%n", areaX);
+        System.out.printf("Triangle X area: %.4f%n", areaY);
         if(areaX > areaY){
-            System.out.printf("Large area: %.4f%n", areaX);
+            System.out.println("Large area: X");
         } else {
-            System.out.printf("Large area: %.4f%n", areaY);
+            System.out.println("Large area: Y");
         }
     }
 }
